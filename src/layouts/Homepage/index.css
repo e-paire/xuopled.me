@@ -1,0 +1,84 @@
+:root {
+  --hexagon-width: 260px;
+  --hexagon-height: 300px;
+  --hexagon-height-quarter: calc(var(--hexagon-height) / 4);
+  --hexagon-width-half: calc(var(--hexagon-width) / 2);
+  --hexagon-offset: 0px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hexagons {
+  position: relative;
+  width: calc(var(--hexagon-width-half) * 5 + var(--hexagon-offset));
+  height: calc(var(--hexagon-height-quarter) * 10 + var(--hexagon-offset));
+}
+
+.hexagon {
+  width: var(--hexagon-width);
+  height: var(--hexagon-height);
+  display: inline-block;
+  text-anchor: middle;
+  alignment-baseline: middle;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hexagon text {
+  fill: #fff;
+  stroke-width: 0;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: normal;
+  font-family: "Cubic";
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hexagon:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hexagon:nth-child(2) {
+  position: absolute;
+  top: var(--hexagon-offset);
+  left: calc(var(--hexagon-width) + var(--hexagon-offset));
+}
+
+.hexagon:nth-child(3) {
+  position: absolute;
+  top: calc(var(--hexagon-height-quarter) * 3 + var(--hexagon-offset));
+  left: calc(var(--hexagon-width-half) + var(--hexagon-offset));
+  fill: #add855;
+}
+
+.hexagon:nth-child(4) {
+  position: absolute;
+  top: calc(var(--hexagon-height-quarter) * 3 + var(--hexagon-offset));
+  left: calc(var(--hexagon-width-half) * 3 + var(--hexagon-offset));
+}
+
+.hexagon:nth-child(5) {
+  position: absolute;
+  top: calc(var(--hexagon-height-quarter) * 6 + var(--hexagon-offset));
+  left: calc(var(--hexagon-width-half) * 2 + var(--hexagon-offset));
+}
+
+.hexagon:nth-child(2) svg,
+.hexagon:nth-child(3) svg,
+.hexagon:nth-child(4) svg,
+.hexagon:nth-child(5) svg {
+  fill: #add855;
+}
+
+.hexagon:nth-child(1) svg,
+.hexagon:nth-child(2) svg:hover,
+.hexagon:nth-child(3) svg:hover,
+.hexagon:nth-child(4) svg:hover,
+.hexagon:nth-child(5) svg:hover {
+  fill: #77aa1f;
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Lato Light";
+  src: url("lato-font/fonts/lato-light/lato-light.eot");
+  src: url("lato-font/fonts/lato-light/lato-light.eot?#iefix") format("embedded-opentype"),
+       url("lato-font/fonts/lato-light/lato-light.woff") format("woff"),
+       url("lato-font/fonts/lato-light/lato-light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Cubic";
+  src: url("styles/cubic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato Light";
+}
